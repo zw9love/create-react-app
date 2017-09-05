@@ -1,0 +1,28 @@
+/**
+ * Created by zengwei on 2017/9/2
+ */
+
+/* sweatalert2 */
+.confirmButtonClass {
+    outline: none;
+    font-size: 14px !important;
+    color: #e8e8e8 !important
+}
+
+.customClass .swal2-content {
+    color: #e8e8e8
+}
+
+
+/* element-react */
+.el-table__body {
+    width:100%!important;
+}
+
+.el-table__body-wrapper{
+    overflow-x: hidden;
+}
+
+.el-table .cell{
+    white-space:nowrap
+}

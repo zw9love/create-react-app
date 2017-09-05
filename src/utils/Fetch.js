@@ -20,7 +20,7 @@ export function fetchData(url, data = {}, fn) {
     const unregister = fetchIntercept.register({
         request: function (url, config) {
             // Modify the url or config here
-            console.log(env)
+            // console.log(env)
             if (env == 'development') {
                 url = `api/${url}`
             }
