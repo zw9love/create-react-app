@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react'
-import styles from '../assets/css/Header.styl'
+import styles from '../assets/stylus/Header.styl'
 import cs from 'classnames/bind'
 import { success } from "../utils/Swal";
 

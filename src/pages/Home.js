@@ -3,10 +3,8 @@
  */
 
 import React, {Component} from 'react'
-import Header from '../components/Header'
-import Side from '../components/Side'
 import Grid from '../components/Grid'
-import styles from '../assets/css/Home.styl'
+import styles from '../assets/stylus/Home.styl'
 import cs from 'classnames/bind'
 import {fetchData} from '../utils/Fetch'
 
@@ -79,7 +77,7 @@ export default class Home extends Component {
 
     // 渲染表单数据
     renderGridData(data) {
-        console.log(data)
+        // console.log(data)
         let arr = []
         let cpu_usage = 0, mem_usage = 0, disk_usage = 0, net_up = 0, net_down = 0
         data.forEach((val, index) => {
@@ -112,19 +110,15 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
-                <Header/>
-                <Side/>
-                <div className={cn('container')}>
-                    <div className={cn('main')}>
-                        <div className={cn('wrapper')}>
-                            <div className={cn('left')}></div>
-                            <div className={cn('right')}></div>
-                        </div>
+            <div className={cn('container')}>
+                <div className={cn('main')}>
+                    <div className={cn('wrapper')}>
+                        <div className={cn('left')}></div>
+                        <div className={cn('right')}></div>
                     </div>
-                    <div className={cn('table')}>
-                        <Grid data={this.state.gridData} columns={this.state.columns}/>
-                    </div>
+                </div>
+                <div className={cn('table')}>
+                    <Grid data={this.state.gridData} columns={this.state.columns}/>
                 </div>
             </div>
         )

@@ -154,7 +154,7 @@ module.exports = {
                         },
                     },
                     // "postcss" loader applies autoprefixer to our CSS.
-                    // "css" loader resolves paths in CSS and adds assets as dependencies.
+                    // "stylus" loader resolves paths in CSS and adds assets as dependencies.
                     // "style" loader turns CSS into JS modules that inject <style> tags.
                     // In production, we use a plugin to extract that CSS to a file, but
                     // in development "style" loader enables hot editing of CSS.
@@ -205,7 +205,7 @@ module.exports = {
                     // This loader don't uses a "test" so it will catch all modules
                     // that fall through the other loaders.
                     {
-                        // Exclude `js` files to keep "css" loader working as it injects
+                        // Exclude `js` files to keep "stylus" loader working as it injects
                         // it's runtime that would otherwise processed through "file" loader.
                         // Also exclude `html` and `json` extensions so they get processed
                         // by webpacks internal loaders.
