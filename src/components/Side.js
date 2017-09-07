@@ -3,13 +3,8 @@
  */
 
 import React, {Component, PropTypes} from 'react'
-import styles from '../assets/stylus/Side.styl'
-// import fontAwesome from "../../node_modules/font-awesome/stylus/font-awesome.min.stylus"
-import cs from 'classnames/bind'
+import '../assets/stylus/Side.styl'
 import {fetchData} from '../utils/Fetch'
-// import { hashHistory } from 'react-router';
-
-let cn = cs.bind(styles)
 
 export default class Side extends Component {
 
@@ -123,7 +118,7 @@ export default class Side extends Component {
 
     render() {
         return (
-            <div className={cn('side')}>
+            <div className="side">
                 <ul>
                     {this.renderMenu()}
                 </ul>

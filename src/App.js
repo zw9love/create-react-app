@@ -5,10 +5,7 @@
 import React, {Component} from 'react'
 import Header from './components/Header'
 import Side from './components/Side'
-import styles from './assets/stylus/App.styl'
-import cs from 'classnames/bind'
-
-const cn = cs.bind(styles)
+import './assets/stylus/App.styl'
 
 export default class App extends Component {
 
@@ -27,7 +24,7 @@ export default class App extends Component {
     render() {
         const {children} = this.props
         return (
-            <div className={cn('app-container')}>
+            <div className='app-container'>
                 <Header/>
                 <Side/>
                 {children}

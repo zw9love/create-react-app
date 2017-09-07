@@ -3,12 +3,12 @@
  */
 
 import React, {Component} from 'react'
+import { Tag } from 'element-react'
 import Grid from '../components/Grid'
+import EditButton from '../components/EditButton'
 import {fetchData} from '../utils/Fetch'
 import styles from '../assets/stylus/HostConfig.styl'
-import cs from 'classnames/bind'
 
-const cn = cs.bind(styles)
 
 export default class HostConfig extends Component {
 
@@ -39,7 +39,17 @@ export default class HostConfig extends Component {
                 {
                     label: "操作",
                     prop: "handle",
-                    align: 'center'
+                    align: 'center',
+                    filters: [{text: '家', value: '家'}, {text: '公司', value: '公司'}],
+                    render: (data, column)=>{
+                        // console.log(data)
+                        return <EditButton name="删除"/>
+                        // if(data['tag'] == '家'){
+                        //     return <Tag type="primary">{data['tag']}</Tag>
+                        // }else if(data['tag'] == '公司'){
+                        //     return <Tag type="success">{data['tag']}</Tag>
+                        // }
+                    }
                 }
             ]
         }
@@ -60,6 +70,7 @@ export default class HostConfig extends Component {
                 hostName:val.name,
                 ip:val.ip,
                 systemType:`${val.os_type}_${val.os_version}_${val.os_arch}`,
+                tag: '公司'
             }
 
             arr.push(obj)

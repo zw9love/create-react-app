@@ -3,11 +3,9 @@
  */
 
 import React, {Component} from 'react'
-import styles from '../assets/stylus/Header.styl'
-import cs from 'classnames/bind'
+import '../assets/stylus/Header.styl'
 import { success } from "../utils/Swal";
 
-let cn = cs.bind(styles)
 
 export default class Header extends Component {
     constructor(props) {
@@ -20,12 +18,12 @@ export default class Header extends Component {
 
     render() {
         return (
-            <header className={cn('header')}>
-                <div className={cn('left_header')}>
+            <header className='header'>
+                <div className='left_header'>
                     <img src={require('../assets/img/logo.png')} alt=""/>
                     <h3>蜂眼主机计算环境安全监控平台</h3>
                 </div>
-                <div className={cn('right_header')}>
+                <div className='right_header'>
                     <ul>
                         <li title="权限">
                             <span>超级管理员</span>
